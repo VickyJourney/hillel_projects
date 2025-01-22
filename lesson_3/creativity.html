@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creativity Greenshop</title>
+    <style>
+      .button {
+        width: 300px;
+        background: #46a358;
+        color: #fff;
+        border: 1px solid #46a358;
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background: #fff;
+        color: #46a358;
+      }
+
+      .social-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+        height: 40px;
+        border: 1px solid #eaeaea;
+        text-decoration: none;
+        gap: 10px;
+        transition: 0.2s;
+        background-color: lightgrey;
+      }
+
+      .social-login:hover {
+        box-shadow: 4px 4px 4px rgb(0, 0, 0, 0.42);
+      }
+
+      .text-input {
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 8px 12px;
+        display: inline-block;
+        width: 300px;
+      }
+      .radio-container {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .line-container {
+        display: flex;
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        gap: 10px;
+      }
+
+      .line {
+        flex-grow: 1;
+        height: 1px;
+        background-color: #ccc;
+      }
+
+      .text {
+        color: #555;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      .textarea {
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        display: block;
+        width: 300px;
+      }
+
+      .sign-form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 300px;
+      }
+
+      .sign-form > * {
+        display: block;
+      }
+
+      .block-label {
+        display: block;
+      }
+
+      .mood-container {
+        display: flex;
+        gap: 4px;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Login | <span style="color: #46a358">Register</span></h1>
+    <p>Enter your name, email and password to register.</p>
+    <form
+      class="sign-form"
+      action="/submit"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <input
+        class="text-input"
+        type="text"
+        name="username"
+        placeholder="Username"
+        required
+      />
+
+      <input
+        class="text-input"
+        type="email"
+        name="email"
+        placeholder="Email adress"
+        required
+      />
+
+      <input
+        class="text-input"
+        type="date"
+        name="birthday"
+        placeholder="Birthday"
+      />
+
+      <input
+        class="text-input"
+        type="password"
+        name="password"
+        placeholder="Password"
+        minlength="6"
+        required
+      />
+
+      <input
+        class="text-input"
+        type="password"
+        name="password2"
+        placeholder="Confirm password"
+        minlength="6"
+        required
+      />
+
+      <div>
+        <label class="block-p" for="mood">Your mood today:</label>
+
+        <div class="mood-container">
+          <div>😢</div>
+          <input
+            class="text-input"
+            type="range"
+            name="mood"
+            min="1"
+            max="10"
+            step="1"
+            required
+          />
+          <div>😃</div>
+        </div>
+      </div>
+
+      <div class="radio-container">
+        <label>Title:</label>
+        <div>
+          <input type="radio" id="mr" name="title" value="mr" />
+          <label for="mr">Mr.</label>
+        </div>
+
+        <div>
+          <input type="radio" id="mrs" name="title" value="mrs" />
+          <label for="mrs">Mrs.</label>
+        </div>
+
+        <div>
+          <input type="radio" id="miss" name="title" value="miss" />
+          <label for="miss">Miss</label>
+        </div>
+
+        <div>
+          <input type="radio" id="ms" name="title" value="ms" />
+          <label for="ms">Ms.</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="employment-status">Employment status:</label>
+        <select class="employment-select" id="employment-status">
+          <option value="employee">Employee</option>
+          <option value="student">Student</option>
+          <option value="retired">Retired</option>
+          <option value="unemployed">Unemployed</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <textarea
+        class="textarea"
+        name="comment"
+        id="comment"
+        cols="30"
+        rows="10"
+        placeholder="Comment"
+      ></textarea>
+
+      <div>
+        <label for="file">Add your photo:</label>
+        <input
+          type="file"
+          name="file"
+          id="file"
+          accept="image/jpg, image/png"
+        />
+      </div>
+
+      <div>
+        <input id="terms" type="checkbox" name="terms" required />
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <input type="submit" value="Register" class="button" /> <br />
+    </form>
+
+    <div class="line-container">
+      <div class="line"></div>
+      <div class="text">Or register with</div>
+      <div class="line"></div>
+    </div>
+    <br />
+
+    <a
+      href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.google.com%3Fhl%3Den-US&ec=GAlA8wE&hl=en&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1026194719%3A1737368776290763&ddm=1"
+      class="social-login"
+    >
+      <img src="images/google.png" alt="Google" width="20px" />
+      <span>Continue with Google</span>
+    </a>
+
+    <br />
+    <a
+      href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfdQghgY5SWCUBn0Og3CLkUw1HhWBTmbUz0ekbpreaizmR4D9KgtLE_JLjmIzaIsrWL3khHMWNvDr-pJELdbCVt8DA3V8O_tf_uccdeDTvy9_g&smuh=23978&lh=Ac-Gnj9nJ4ftrZj0yNY"
+      class="social-login"
+    >
+      <img src="images/fb.png" alt="Facebook" width="20px" />
+      <span>Continue with Facebook</span>
+    </a>
+  </body>
+</html>
