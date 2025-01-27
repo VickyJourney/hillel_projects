@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vicky Journey</title>
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="images/star1.jpg" type="image/x-icon" />
   </head>
   <body>
@@ -14,8 +14,6 @@
     </header>
     <main>
       <div class="intro">
-        <img src="images/vicky.jpg" alt="Vicky" />
-        <br />
         <section>
           <br />
           <h2>Introduction</h2>
@@ -30,9 +28,10 @@
             wonderful years at PURO, I decided to begin my journey in the
             <u>IT field</u>. Hopefully, it is something I will enjoy doing and
             continue exploring along the way. Wish me luck!
-            <!-- эти стили сверху тоже нужно поменять в другой файл? -->
           </p>
         </section>
+        <img src="images/vicky.jpg" alt="Vicky" />
+        <br />
       </div>
       <hr />
       <section>
@@ -46,31 +45,33 @@
       <section>
         <h2>Work experience:</h2>
         <table>
-          <tr class="table-header">
+          <thead id="tab-header">
             <th>Year</th>
             <th>Place</th>
             <th>Position</th>
-          </tr>
-          <tr>
-            <td>2019-2020</td>
-            <td>PURO Krakow</td>
-            <td>Receptionist</td>
-          </tr>
-          <tr>
-            <td>2020-2021</td>
-            <td>PURO Krakow</td>
-            <td>Reservation Agent</td>
-          </tr>
-          <tr>
-            <td>2021-2023</td>
-            <td>PURO Warsaw</td>
-            <td>Event Manager</td>
-          </tr>
-          <tr>
-            <td>2023-2024</td>
-            <td>PURO Warsaw</td>
-            <td>Sales Manager</td>
-          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2019-2020</td>
+              <td>PURO Krakow</td>
+              <td>Receptionist</td>
+            </tr>
+            <tr>
+              <td>2020-2021</td>
+              <td>PURO Krakow</td>
+              <td>Reservation Agent</td>
+            </tr>
+            <tr>
+              <td>2021-2023</td>
+              <td>PURO Warsaw</td>
+              <td>Event Manager</td>
+            </tr>
+            <tr>
+              <td>2023-2024</td>
+              <td>PURO Warsaw</td>
+              <td>Sales Manager</td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section>

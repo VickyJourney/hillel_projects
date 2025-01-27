@@ -1,0 +1,74 @@
+
+body {
+    background-color: lightgreen; 
+    color: darkgreen;
+    padding: 20px; 
+}
+
+h1 {
+    color: darkgreen;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
+    text-align: center 
+}
+
+div section {
+    text-align: justify;
+    margin-right: 40px;
+}
+
+table {
+    width: 450px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #000;
+}
+
+th {
+    width: 150px;
+}
+
+tr {
+    background-color: lightyellow;
+    color: darkcyan;
+    text-align: center;
+}
+
+/* Use of pseudo-class selector */
+tbody tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+/* Use of id selector */
+#tab-header th {
+    background-color: yellow;
+}
+
+.intro {
+    display: flex;
+    gap: 10px
+}
+
+.intro img {
+    height: 300px;
+}
+
+.container {
+    display: flex;
+    gap: 20px
+}
+
+.container p {
+    text-align: center
+}
+
+.container img {
+    height: 200px;
+}
+
+.yoga {
+    text-decoration: none;
+    font-size: 24px;
+}
